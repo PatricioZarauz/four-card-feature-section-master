@@ -47,29 +47,60 @@ p {
   color: #a3a5ae; }
 
 article {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 8px 10px #a3a5ae;
-  border-top-color: #ea5353;
-  border-top-width: 4px;
-  border-top-style: solid; }
+  overflow: hidden; }
   article img {
     margin-top: 1.5rem;
     margin-left: auto; }
 
 article:nth-of-type(1) {
   grid-area: supervisor; }
+  article:nth-of-type(1)::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: #45d3d3;
+    left: 0;
+    top: 0; }
 
 article.team-builder {
   grid-area: team-builder; }
+  article.team-builder::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: #ea5353;
+    left: 0;
+    top: 0; }
 
 article.karma {
   grid-area: karma; }
+  article.karma::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: #fcaf4a;
+    left: 0;
+    top: 0; }
 
 article.calculator {
   grid-area: calculator; }
+  article.calculator::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: #549ef2;
+    left: 0;
+    top: 0; }
 
 /*# sourceMappingURL=index.css.map */

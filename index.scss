@@ -6,6 +6,18 @@ $very_dark_blue: hsl(234, 12%, 34%);
 $grayish_blue: hsl(229, 6%, 66%);
 $very_light_gray: hsl(0, 0%, 98%);
 
+@mixin card-top-border($color) {
+  &::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    background-color: $color;
+    left: 0;
+    top: 0;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -73,15 +85,14 @@ p {
 }
 
 article {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 8px 10px $grayish_blue;
-  border-top-color: $red;
-  border-top-width: 4px;
-  border-top-style: solid;
+  overflow: hidden;
 
   img {
     margin-top: 1.5rem;
@@ -90,17 +101,25 @@ article {
 }
 
 article:nth-of-type(1) {
+  @include card-top-border($cyan);
+
   grid-area: supervisor;
 }
 
 article.team-builder {
+  @include card-top-border($red);
+
   grid-area: team-builder;
 }
 
 article.karma {
+  @include card-top-border($orange);
+
   grid-area: karma;
 }
 
 article.calculator {
+  @include card-top-border($blue);
+
   grid-area: calculator;
 }
