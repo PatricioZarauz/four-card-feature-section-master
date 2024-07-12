@@ -24,9 +24,9 @@ main {
   @media (min-width: 45rem) {
     main {
       align-items: stretch;
-      grid-template-rows: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
       grid-auto-columns: 1fr;
-      grid-template-areas: "supervisor team-builder calculator" ". karma ."; } }
+      grid-template-areas: ". team-builder ." "supervisor team-builder calculator" "supervisor karma calculator" ". karma ."; } }
 
 header {
   text-align: center;
