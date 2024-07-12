@@ -23,10 +23,10 @@ main {
   grid-template-areas: "supervisor" "team-builder" "karma" "calculator"; }
   @media (min-width: 45rem) {
     main {
-      align-items: center;
-      grid-auto-rows: 1fr;
+      align-items: stretch;
+      grid-template-rows: repeat(2, 1fr);
       grid-auto-columns: 1fr;
-      grid-template-areas: "supervisor team-builder calculator" "supervisor karma calculator"; } }
+      grid-template-areas: "supervisor team-builder calculator" ". karma ."; } }
 
 header {
   text-align: center;
