@@ -17,19 +17,22 @@ body {
   margin-inline: 2.5rem;
   background-color: #fafafa; }
 
-main {
+ul {
   margin-inline: auto;
   width: fit-content;
   display: grid;
   grid-gap: 2rem;
   grid-auto-rows: 1fr;
-  grid-auto-columns: minmax(auto, 24rem);
+  grid-auto-columns: minmax(auto, 23.5rem);
   grid-template-areas: "supervisor" "team-builder" "karma" "calculator"; }
-  @media (min-width: 55rem) {
-    main {
+  @media (min-width: 50rem) {
+    ul {
+      grid-template-areas: "supervisor team-builder" "karma calculator"; } }
+  @media (min-width: 70rem) {
+    ul {
       grid-template-areas: ". team-builder ." "supervisor team-builder calculator" "supervisor karma calculator" ". karma ."; } }
 
-header {
+.heading {
   text-align: center;
   margin-bottom: 4.5rem;
   max-width: 58ch;
@@ -45,9 +48,9 @@ h1 {
   h1 > b {
     display: block;
     font-weight: 600; }
-  @media (min-width: 55rem) {
+  @media (min-width: 50rem) {
     h1 {
-      font-size: 2.3rem; } }
+      font-size: 2.4rem; } }
 
 h2 {
   color: #4c4e61;
@@ -57,25 +60,25 @@ h2 {
 p {
   color: #a3a5ae; }
 
-article {
+li.card {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding: 2.25rem;
+  padding: 2.1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px #a3a5ae;
+  box-shadow: 0 14px 18px rgba(163, 165, 174, 0.3);
   overflow: hidden; }
-  article p {
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem; }
-  article img {
+  li.card p {
+    margin-top: 0.2rem;
+    margin-bottom: 2rem; }
+  li.card img {
     margin-top: auto;
     margin-left: auto; }
 
-article:nth-of-type(1) {
+li.supervisor {
   grid-area: supervisor; }
-  article:nth-of-type(1)::before {
+  li.supervisor::before {
     position: absolute;
     width: 100%;
     content: "";
@@ -84,9 +87,9 @@ article:nth-of-type(1) {
     left: 0;
     top: 0; }
 
-article.team-builder {
+li.team-builder {
   grid-area: team-builder; }
-  article.team-builder::before {
+  li.team-builder::before {
     position: absolute;
     width: 100%;
     content: "";
@@ -95,9 +98,9 @@ article.team-builder {
     left: 0;
     top: 0; }
 
-article.karma {
+li.karma {
   grid-area: karma; }
-  article.karma::before {
+  li.karma::before {
     position: absolute;
     width: 100%;
     content: "";
@@ -106,9 +109,9 @@ article.karma {
     left: 0;
     top: 0; }
 
-article.calculator {
+li.calculator {
   grid-area: calculator; }
-  article.calculator::before {
+  li.calculator::before {
     position: absolute;
     width: 100%;
     content: "";
