@@ -53,7 +53,7 @@ The main thing that I learned was the usage of `grid-template-areas` and improve
 
 ### Continued development
 
-Any accessability suggestions are welcomed as well as any code improvements.
+Any accessibility suggestions are welcomed as well as any code improvements.
 
 ## Author
 
